@@ -24,8 +24,8 @@ router.get('/', function (req, res, next) {
   // });
 });
 
-router.get('/themehome', function (req, res, next) {
-  res.render('/production/index',{title:'hello'});
+router.get('/page', function (req, res, next) {
+  res.render('page');
 });
 
 router.get('/mycontroller', dbhome);
