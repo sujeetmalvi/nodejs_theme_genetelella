@@ -1,0 +1,30 @@
+<%- include('template_header') -%>
+
+<form method="post" action="/save_contact">
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10">
+        <%=data.body.firstname%>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-10">
+        <%=data.body.lastname%>
+      </div>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+      <div class="col-sm-10">
+        <%=data.body.gridRadios%>
+      </div>
+    </fieldset>
+    <div class="row mb-3">
+      <div class="col-sm-10 offset-sm-2">
+        <div class="form-check">
+            Example checkbox = <%=data.body.mycheckbox%>
+        </div>
+      </div>
+    </div>
+  </form>     
+<%- include('template_footer') -%>

@@ -1,0 +1,18 @@
+<%- include('template_header') -%>
+<table cellspacing="6" cellpadding="10" style="border: solid 1px;">
+  <tr>
+    <th>Option id</th>
+    <th>Option name</th>
+    <th>Option value</th>
+    <th>autoload</th>
+  </tr>
+  <% data.forEach(element => { %>
+  <tr>
+    <td><%= element.option_id %></td>
+    <td><%= element.option_name %></td>
+    <td><%= element.option_value %></td>
+    <td><%= element.autoload %></td>
+  </tr>
+  <%   }); %>
+</table>
+<%- include('template_footer') -%>
