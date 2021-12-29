@@ -28,6 +28,13 @@ router.get('/', function (req, res, next) {
 router.get('/dashboardb', function (req, res, next) {
   res.render('dashboardb');
 });
+router.get('/dashboardc', function (req, res, next) {
+  res.render('dashboardc');
+});
+
+router.get('/login', function (req, res, next) {
+  res.render('login');
+});
 
 router.get('/page', function (req, res, next) {
   res.render('page');
