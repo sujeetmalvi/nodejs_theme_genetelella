@@ -2,6 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var router = express.Router();
 const { dbhome } = require('../controllers/mycontroller.controller');
+const { author_list } = require('../controllers/author.controller');
 
 
 /* GET home page. */
@@ -24,19 +25,17 @@ router.get('/', function (req, res, next) {
   // });
 });
 
+router.get('/dashboardb', function (req, res, next) {
+  res.render('dashboardb');
+});
+
 router.get('/page', function (req, res, next) {
   res.render('page');
 });
 
+router.get('/table', author_list);
+
 router.get('/mycontroller', dbhome);
-
-router.get('/about', function (req, res, next) {
-  res.render('about', { title: 'This is About Us' });
-});
-
-router.get('/contactus', function (req, res, next) {
-  res.render('contactus', { title: 'This is Contact us' });
-});
 
 router.post('/save_contact', function (req, res, next) {
   console.log(req.body);
