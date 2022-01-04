@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var router = express.Router();
 const { dbhome } = require('../controllers/mycontroller.controller');
-const { author_list,author_create,author_edit } = require('../controllers/author.controller');
+const { author_list,author_create,author_edit,author_update } = require('../controllers/author.controller');
 
 
 /* GET home page. */
@@ -46,6 +46,7 @@ router.get('/form', function (req, res, next) {
 
 router.post('/create_author', author_create);
 router.get('/edit_author', author_edit);
+router.get('/update_author', author_update);
 
 
 
