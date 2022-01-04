@@ -1,5 +1,5 @@
 var express = require('express');
-var mysql = require('mysql');
+//var mysql = require('mysql');
 var router = express.Router();
 const { dbhome } = require('../controllers/mycontroller.controller');
 const { author_list,author_create,author_edit,author_update } = require('../controllers/author.controller');
