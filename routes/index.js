@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var router = express.Router();
 const { dbhome } = require('../controllers/mycontroller.controller');
-const { author_list } = require('../controllers/author.controller');
+const { author_list,author_create,author_edit } = require('../controllers/author.controller');
 
 
 /* GET home page. */
@@ -39,6 +39,16 @@ router.get('/login', function (req, res, next) {
 router.get('/page', function (req, res, next) {
   res.render('page');
 });
+
+router.get('/form', function (req, res, next) {
+  res.render('author/form',{response:'create Author',data:{}});
+});
+
+router.post('/create_author', author_create);
+router.get('/edit_author', author_edit);
+
+
+
 
 router.get('/table', author_list);
 
