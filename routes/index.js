@@ -8,21 +8,6 @@ const { author_list,author_create,author_edit,author_update } = require('../cont
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'This is home page' });
-  // http://localhost:3000/?id=8
-//  var id = req.query.id;
-  //console.log(id);
-  // var con = mysql.createConnection({
-  //   host: "localhost",
-  //   user: "root",
-  //   password: ""
-  // });
-  // con.connect(function (err) {
-  //   if (err) throw err;
-  //   con.query("SELECT * FROM wordpress.wp_options where option_id="+id+" limit 0,10", function (err, result) {
-  //     if (err) throw err;
-  //     res.render('index', { title: 'This is home page',data:result });
-  //   });
-  // });
 });
 
 router.get('/dashboardb', function (req, res, next) {
