@@ -23,6 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/static',express.static(path.join(__dirname, 'public')));
 
+app.listen(3005, '0.0.0.0');
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
